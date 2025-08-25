@@ -10,6 +10,7 @@ async function listInvoices() {
     WHERE invoices.amount = 666;
   `;
 
+  console.log(`h8n# /query: listInvoices()`);
 	return data;
 }
 
@@ -19,6 +20,7 @@ export async function GET() {
   //     'Uncomment this file and remove this line. You can delete this file when you are finished.',
   // });
   try {
+    console.log(`h8n# /query`);
   	return Response.json(await listInvoices());
   } catch (error) {
   	return Response.json({ error }, { status: 500 });
